@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>zslvtravel 旅遊影片時序索引</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif;background:#111;color:#eee;max-width:960px;margin:0 auto;padding:12px;font-size:14px}
+header{position:sticky;top:0;background:#111;padding:8px 0;border-bottom:1px solid #333;z-index:10}
+h1{font-size:16px;margin:0 0 6px;color:#ddd}
+#f{width:100%;padding:8px;background:#222;color:#eee;border:1px solid #444;font-size:14px;border-radius:4px}
+#c{font-size:12px;color:#888;margin-top:4px}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+tr{border-bottom:1px solid #1f1f1f}
+tr:hover{background:#1a1a1a}
+td{padding:4px 6px;vertical-align:middle}
+td.thumb{width:128px}
+img{width:120px;height:68px;object-fit:cover;display:block;border-radius:3px;background:#222}
+.date{font-family:monospace;font-size:11px;color:#888;margin-bottom:2px}
+.title{color:#eee;text-decoration:none;font-size:14px;line-height:1.3;display:block}
+.title:hover{color:#7cf;text-decoration:underline}
+.meta{font-size:10px;color:#666;margin-top:2px}
+.kind{display:inline-block;padding:0 4px;border-radius:2px;font-weight:bold}
+.kV{background:#234;color:#9cf}
+.kS{background:#432;color:#fc9}
+.dur{font-family:monospace}
+footer{margin-top:24px;padding-top:12px;border-top:1px solid #333;font-size:11px;color:#666;text-align:center}
+</style>
+</head>
+<body>
+<header>
+<h1>zslvtravel · 旅遊影片時序索引</h1>
+<input id="f" placeholder="搜尋標題或日期 (例: 屏東, 水族, 20260809…)" autocomplete="off">
+<div id="c"></div>
+</header>
+<table><tbody id="r">
+
+</tbody></table>
+<footer>2026-08-21 23:48 產出 · 0 支影片 · 時序由標題前綴 date_token 決定</footer>
+<script>
+const f=document.getElementById('f'),rs=document.querySelectorAll('#r tr'),c=document.getElementById('c');
+function u(){const q=f.value.toLowerCase();let n=0;rs.forEach(r=>{const s=!q||r.dataset.s.includes(q);r.style.display=s?'':'none';if(s)n++;});c.textContent=`${n} / ${rs.length} 支`}
+f.addEventListener('input',u);u();
+</script>
+</body></html>
