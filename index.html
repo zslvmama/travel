@@ -66,10 +66,10 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid #333;font-size:11px
 <tr data-s="20260802t1804 20260802.1804_台南公園-黑冠麻鷺"><td class="thumb"><a href="https://youtu.be/v3YfbKHkv_Y" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/v3YfbKHkv_Y/mqdefault.jpg" loading="lazy" alt=""></a></td><td><div class="date">2026-08-02 18:04</div><a href="https://youtu.be/v3YfbKHkv_Y" target="_blank" rel="noopener" class="title">20260802.1804_台南公園-黑冠麻鷺</a><div class="meta"><span class="kind kS">S</span></div></td></tr>
 <tr data-s="20260802t1441 20260802.1441_關仔嶺-碧雲寺"><td class="thumb"><a href="https://youtu.be/X_mZ2uq5hxY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/X_mZ2uq5hxY/mqdefault.jpg" loading="lazy" alt=""></a></td><td><div class="date">2026-08-02 14:41</div><a href="https://youtu.be/X_mZ2uq5hxY" target="_blank" rel="noopener" class="title">20260802.1441_關仔嶺-碧雲寺</a><div class="meta"><span class="kind kV">V</span> · <span class=dur>0:04</span></div></td></tr>
 </tbody></table>
-<footer>2026-09-22 15:02 產出 · 30 支影片 · 時序由標題前綴 date_token 決定</footer>
+<footer>2026-09-22 15:21 產出 · 30 支影片 · 時序由標題前綴 date_token 決定</footer>
 <script>
 const f=document.getElementById('f'),rs=document.querySelectorAll('#r tr'),c=document.getElementById('c');
 function u(){const q=f.value.toLowerCase();let n=0;rs.forEach(r=>{const s=!q||r.dataset.s.includes(q);r.style.display=s?'':'none';if(s)n++;});c.textContent=`${n} / ${rs.length} 支`}
-f.addEventListener('input',u);u();
+const q0=new URLSearchParams(location.search).get('q');if(q0)f.value=q0;f.addEventListener('input',u);u();
 </script>
 </body></html>
